@@ -19,4 +19,4 @@ python3 -m unittest
     Reports in TestReport_UI file
     
     Run testOrionAPI.py for APi test
-    Reports in TestReport_API file
+    Reports in TestReport_API file"# orion_platform_test-master" 
