@@ -1,0 +1,30 @@
+image: "python:3.7"
+
+before_script:
+  - python3 --version
+  - pip3 install requests
+  - pip3 install xeger
+  - pip3 install xlsxwriter
+stages:
+  - build
+  - test
+
+build:
+  stage: build
+
+  script: TestOrionAPI.py
+
+#  script: python3  test_get_access_token.py
+#  script: python3  test_get_user_profile.py
+#  script: python3  test_create_order.py
+#  script: python3  test_pay_leger.py
+#  script: python3  test_upload_and_submit_task.py
+
+test:
+  stage: test
+  script: python3 -m TestOrionAPI.py
+
+
+  only:
+      - master
+      - schedules
